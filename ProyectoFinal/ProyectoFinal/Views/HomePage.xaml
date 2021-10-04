@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ProyectoFinal.Views.HomePage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <ScrollView>
+             <Grid BackgroundColor="White">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="{Binding Appname}" Margin="0,30,0,0" HorizontalOptions="CenterAndExpand" FontSize="Title" Grid.Row="0" FontAttributes="Bold" FontFamily="Arial" Grid.ColumnSpan="3"/>
+                
+                <ImageButton Command="{Binding NavigateBeach}" Source="{Binding Beach.Image}" Grid.Row="1" Grid.Column="0" Padding="10" Margin="70,0,0,0"  BackgroundColor="LightGray" CornerRadius="20"></ImageButton>
+                <Label Text="{Binding Beach.Title}" Grid.Row="2" Grid.Column="0" Margin="0,0,10,0" HorizontalOptions="End" ></Label>
+
+                <ImageButton  Source="{Binding Camping.Image}" Grid.Row="1" Grid.Column="2" Padding="10" Margin="0,0,70,0"   BackgroundColor="LightGray" CornerRadius="20"></ImageButton>
+                <Label Text="{Binding Camping.Title}" Grid.Row="2" Grid.Column="2" Margin="5,0,0,0" HorizontalOptions="Start" ></Label>
+
+                <ImageButton  Source="{Binding Hiking.Image}" Grid.Row="3" Grid.Column="0" Padding="10" Margin="70,0,0,0"  BackgroundColor="LightGray" CornerRadius="20"></ImageButton>
+                <Label Text="{Binding Hiking.Title}" Grid.Row="4" Grid.Column="0" Margin="0,0,10,0" HorizontalOptions="End" ></Label>
+
+                <ImageButton  Source="{Binding Lake.Image}" Grid.Row="3" Grid.Column="2" Padding="10" Margin="0,0,70,0"  BackgroundColor="LightGray" CornerRadius="20"></ImageButton>
+                <Label Text="{Binding Lake.Title}" Grid.Row="4" Grid.Column="2"  Margin="15,0,0,0" HorizontalOptions="Start" ></Label>
+
+                </Grid>
+
+      </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
